@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Peso de Metais</title>
+    <link rel="stylesheet" href="./setting/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Conversor de Peso de Metais</h1>
+
+        <div class="form">
+
+            <div class="input-group">
+                <label for="tipoForma">Tipo de Forma:</label>
+                <select id="tipoForma" onchange="alternarCamposEntrada()"> 
+                    <option value="retangular">Retangular</option>
+                    <option value="redonda">Redonda</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="tipoMetal">Tipo de Metal:</label>
+                <select id="tipoMetal">
+                    <option value="aco-carbono">Aço Carbono</option>
+                    <option value="aco-inox">Aço Inox</option>
+                    <option value="aluminio">Alumínio</option>
+                </select>
+            </div>
+
+            <div id="entradasRetangulares">
+                <div class="input-group">
+                    <label for="comprimento">Comprimento (mm):</label>
+                    <input type="number" id="comprimento" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="largura">Largura (mm):</label>
+                    <input type="number" id="largura" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="espessura">Espessura (mm):</label>
+                    <input type="number" id="espessura" required>
+                </div>
+            </div>
+
+            <div id="entradasRedondas" style="display: none;"> 
+                <div class="input-group">
+                    <label for="diametro">Diâmetro (mm):</label>
+                    <input type="number" id="diametro"> 
+                </div>
+
+                <div class="input-group">
+                    <label for="comprimentoRedondo">Comprimento (mm):</label>
+                    <input type="number" id="comprimentoRedondo"> 
+                </div>
+            </div>
+
+            <div class="input-group">
+                <button onclick="calcularPeso()">Calcular Peso</button>
+            </div>
+
+        </div>
+
+        <p id="resultado"></p>
+
+    </div>
+
+    <script src="./setting/script.js"></script>
+</body>
+</html>
